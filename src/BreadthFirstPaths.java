@@ -1,3 +1,4 @@
+import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Stack;
 
@@ -17,13 +18,13 @@ public class BreadthFirstPaths {
     }
 
     private void bfs(Graph G, int s) {
-        Queue<Integer> queue = new Queue<Integer>();
+        Queue<Integer> queue = new LinkedList<Integer>();
         marked[s] = true;
         queue.add(s);
         while (!queue.isEmpty()) {
             int w = queue.poll();
             if (!marked[w]) {
-                edgeTo[w] = v;
+                edgeTo[w] = s;
                 marked[w] = true;
                 queue.add(w);
             }

@@ -14,7 +14,7 @@ public class DepthFirstSearch {
         marked[v] = true;
         count++;
         for (int w: G.adj(v))
-            if (!marked[w]) dfs(G.w);
+            if (!marked[w]) dfs(G, v);
     }
 
     public boolean marked(int w) {
